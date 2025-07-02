@@ -1,0 +1,161 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YCCD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Public+Sans:wght@400&amp;display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Public Sans', sans-serif;
+            background-color: #ffffff;
+            padding: 0 18px;
+            box-sizing: border-box;
+        }
+
+        a {
+            all: unset;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            text-align: left;
+            padding: 12px;
+            margin: 0 auto;
+        }
+
+        .container h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            margin: 2rem 0;
+            line-height: 4rem;
+        }
+
+        .container p {
+            font-size: 1rem;
+            color: rgb(70, 70, 70);
+            margin-block: 1rem;
+        }
+
+        .button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-top: 1rem;
+            border: 1px solid gray;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            font-family: 'Public Sans', sans-serif;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 12px;
+            transition: background-color 0.2s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        .button h2 {
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 0.1rem 0;
+        }
+
+        .button p {
+            margin: 0.2rem 0;
+        }
+
+        .button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .break {
+            margin-bottom: 25px;
+        }
+
+        .separador {
+            height: 14px;
+        }
+
+        .separador2 {
+            height: 1px;
+        }
+
+        @media (max-width: 520px) {
+            .container {
+                max-width: 100%;
+                padding: 0 18px;
+            }
+
+            .container h1 {
+                font-size: 3rem;
+                line-height: 3rem;
+                margin: 1rem 0;
+            }
+
+            .container p {
+                font-size: 0.9rem;
+                margin-block: 1rem;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .button p {
+                margin-block: 0.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YIHAD CONTRA LAS CORPORACIONES DE LA DISTRACCIÓN</h1>
+        <p>La Yihad es una guerra por el destino de la humanidad. Se batalla en todos lados todo el tiempo. <br> <br>
+
+            Cada momento en que logramos evitar la adicción conectiva impulsada por Meta, TikTok, X y Google es una victoria para nosotr<span class="changing-char">a</span>s. <br><br>
+            
+            No nos contentamos con eso, nuestro plan de lucha tiene objetivos de corto, mediano y largo plazo. Nos proponemos ser más masivos que eso contra lo que luchamos. <br><br>
+            
+            Atravesamos una pandemia de estupidez mundial, el diagnóstico se interpreta a partir del gesto: alguien que scrollea 3 hs diarias, puede ser caracterizable como pelotud<span class="changing-char">a</span>. <br><br>
+            
+            Tod<span class="changing-char">a</span>s estamos encarnando ese rol, l<span class="changing-char">e</span>s yihadistas no estamos iluminad<span class="changing-char">e</span>s ni somos distint<span class="changing-char">o</span>s. Por eso inculcamos una disciplina individual y colectiva que nos permita estar concentrad<span class="changing-char">x</span>s. Somos enemigos mortales de los tecnócratas pero no Ludditas. </p>
+        <div class="separador2"></div>
+     
+        <a href="https://heyform.net/f/vEmXfJ0t"><div class="button"><h2>Quiero unirme</h2><p>Pasanos un mail así podemos estar en contacto</p></div></a>
+
+        <a href="https://drive.proton.me/urls/7A7RVRS1ZM#Gas7Y6oJhRyz"><div class="button"><h2>Imprimí tus volantes</h2><p>Material gráfico para amplificar la yihad</p></div></a>
+     
+        <div class="separador"></div>
+    </div>
+
+    <script>
+        const letters = ['a', 'e', 'o', 'x', '@'];
+        let intervals = [];
+        
+        function getRandomLetter() {
+            return letters[Math.floor(Math.random() * letters.length)];
+        }
+        
+        function startAnimation() {
+            intervals.forEach(interval => clearInterval(interval));
+            intervals = [];
+            
+            const changingChars = document.querySelectorAll('.changing-char');
+            
+            changingChars.forEach((char) => {
+                const interval = setInterval(() => {
+                    char.textContent = getRandomLetter();
+                }, 2000 + (Math.random() * 3000)); // Much slower, more random timing
+                
+                intervals.push(interval);
+            });
+        }
+        
+        startAnimation();
+    </script>
